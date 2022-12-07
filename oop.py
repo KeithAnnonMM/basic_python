@@ -1,27 +1,16 @@
-class User:
-    def __init__(self,first,last,password):
-        self.first = first
-        self.last = last
-        self.password = password
-        self.email = first.lower()+last.lower()+'@gmail.com'
-
-    def checkPasswordLength(self):
-        if len(self.password) < 8:
-            return 'Invalid Password'
-        else:
-            return self.password   
-
-    def fullname(self):
-        return ('{} {}').format(self.first,self.last) 
-        
+class Animal:
+    def __init__(self,type):
+        self.type = 'Keith'
 
 
+class Lion(Animal):
+    name = 'Simba'
+    age = 0
 
-fname = input('Enter your first name:')
-lname = input('Enter your last name:')
-password = input('Enter your password:')
+    def __init__(self,name,age,type):
+        self.type = type
+        self.name = name
+        self.age = age
 
-user1 = User(fname,lname,password)
-print(user1.checkPasswordLength())
-print(user1.fullname())
-
+lion1 = Lion('Livaro',20,'Carnivo')
+print(lion1.type)
