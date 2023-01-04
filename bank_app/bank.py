@@ -1,5 +1,6 @@
 from user import User
 from account import Account
+from database import insertValues
 
 class Bank:
     users = []
@@ -54,4 +55,6 @@ bank.addUser(account2)
 bank.addUser(account3)
 print(bank.userNumber())
 
-print(bank.login())
+# print(bank.login())
+insertValues(user1.getName(),user2.getNin(),0)
+print('success')
